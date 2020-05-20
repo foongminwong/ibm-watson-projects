@@ -16,3 +16,10 @@
     * Scalability - Can expand their storage capacities during runtimeto accommodate changing needs
     * Disaster recovery - kept data secure through backups on remote servers
     * e.g.: IBM DB2 on Cloud, COmpose for PostgreSQL, Oracle Database Cloud, Microsoft Azure Cloud, SQL Databse, Amazon Relational Database Services 
+
+## CREATE TABLE Statement
+* DDL (Data Definition Language) statements - define, change or drop data (e.g. CREATE)
+* DML (Data Manipulation Language) statements: read & modify data
+* Columns -> Entity attributes (e.g. char - character string of a fixed length, varcahr - character string of a variable length)
+* Priamry key - no duplicate values can exist, uniquely identifies each tuple or row in a table, constraint prevents duplicate values in table
+* Constraint NOT NULL - ensures fields cannot contain a null value
