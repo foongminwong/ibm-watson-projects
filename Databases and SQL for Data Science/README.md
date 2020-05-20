@@ -50,4 +50,8 @@
 * Entity Relationship Diagram (ERD) - represents entities called tables and their relationships (ER Diagram = Entities [rectangle] + Attributes [ovals])
 * Entity-Relationship Model - a database as a collection of entities (objects that exist independently of any other entities in the database), to design relational databases
 
-
+**Types of Relationships**
+* Relationship = entities sets [rectangle] + relationship sets [diamond with lines connecting associated entities]+ crows foot notations
+* 1-to-1 (entity || diamond || entity)
+* 1-to-many OR many-to-1 (entity || diamond < Author) 
+* many-to-many (book > authored by < author)
