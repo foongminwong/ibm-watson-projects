@@ -19,7 +19,7 @@
 
 ## CREATE TABLE Statement
 * DDL (Data Definition Language) statements - define, change or drop data (e.g. CREATE)
-* DML (Data Manipulation Language) statements: read & modify data (e.g. SELECT)
+* DML (Data Manipulation Language) statements: read & modify data (e.g. SELECT, INSERT, UPDATE)
 * Columns -> Entity attributes (e.g. char - character string of a fixed length, varcahr - character string of a variable length)
 * Priamry key - no duplicate values can exist, uniquely identifies each tuple or row in a table, constraint prevents duplicate values in table
 * Constraint NOT NULL - ensures fields cannot contain a null value
@@ -30,3 +30,12 @@
 * WHERE Clause - to restrict the Result Set
 * WHERE clause requires a predicate
 * Predicate - is conditioned evaluates to true, false or unknown, used in search condition
+
+## COUNT, DISTINCT, LIMIT (expressions used with SELECT statements)
+
+## INSERT Statement
+* Populate with /insert data
+* A single INSERT statement can be used to inset 1 or multiple rows in a table
+
+## UPDATE and DELETE Statements
+
