@@ -55,3 +55,8 @@
 * 1-to-1 (entity || diamond || entity)
 * 1-to-many OR many-to-1 (entity || diamond < Author) 
 * many-to-many (book > authored by < author)
+
+**Mapping Entities to Tables**
+* Entity (Book) = Table, Attributes (Title, Edition, Description, ISBN, etc.) = Columns
+
+****
