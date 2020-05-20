@@ -59,4 +59,27 @@
 **Mapping Entities to Tables**
 * Entity (Book) = Table, Attributes (Title, Edition, Description, ISBN, etc.) = Columns
 
-****
+**Relational Model Concepts**
+* Relation Model = Relation + Sets
+* Set - unordered collection of distinct elements, collection of items of the same type, no order & no duplicates
+* Relational Databse = set of relations
+* Relation - mathematical term for a table (a combination of rows and columns)
+* Relation:
+    * Relational Schema - specify name of a relation and attributes (e.g. `AUTHOR(Author_ID:char, lastname:varchar, firstname: varchar, country: char)`)
+    * Relational Instance - a table made up of attributes or columns
+        * Columns = attributes = field
+        * Row = Tuple
+* Relation: Degree & Cardinality
+    * Degree = the number of attributes in a relation
+    * Cardinality = the number of tuples or rows
+* Summary:
+    * Relational Model: based on the concept of relation
+    * Relation:
+        * A mathematical concept-based, matheamtical term for table
+        * Made up of 2 parts: Relational schema and relational Instance
+    * Relational schema: specifies relation name and attributes
+    * Relation Instance: a table made up of attributes and tuples
+    * Degree: the numebr of attributes
+    * Cardinality: the number of tuples
+
+    
