@@ -41,3 +41,13 @@
 
 **UPDATE and DELETE Statements**
 
+## Relational Database Concepts
+
+**Informationa and Data Models**
+* Information model - an abstract formal representation of entities (can be from real world) that includes their properties, relationships, operations that can be performed on them, at conceptual levels & defines relationships between objects (e.g. Hierarchical - organziation chart ina tree structure)
+* Data model - concrete level, specific & include details, a blueprint of any database system
+(e.g. Relational Model - most used, allows data independence such as logical data independence, physical data independence, physical storage independence) (e.g. entity-relationship/ER data model - alternative to a relational data model)
+* Entity Relationship Diagram (ERD) - represents entities called tables and their relationships (ER Diagram = Entities [rectangle] + Attributes [ovals])
+* Entity-Relationship Model - a database as a collection of entities (objects that exist independently of any other entities in the database), to design relational databases
+
+
