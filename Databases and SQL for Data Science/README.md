@@ -82,4 +82,6 @@
     * Degree: the numebr of attributes
     * Cardinality: the number of tuples
 
-    
+**Additional Information**
+* Create Schema = A SQL schema is identified by a schema name, and includes a authorization identifier to indicate the user or account who owns the schema. Schema elements include tables, constraints, views, domains and other constructs that describe the schema. (e.g. LIBRARY schema has multiple tables such as AUTHOR, BOOK)
+* Database -> Schema -> Tables
