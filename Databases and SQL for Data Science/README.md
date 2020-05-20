@@ -19,7 +19,14 @@
 
 ## CREATE TABLE Statement
 * DDL (Data Definition Language) statements - define, change or drop data (e.g. CREATE)
-* DML (Data Manipulation Language) statements: read & modify data
+* DML (Data Manipulation Language) statements: read & modify data (e.g. SELECT)
 * Columns -> Entity attributes (e.g. char - character string of a fixed length, varcahr - character string of a variable length)
 * Priamry key - no duplicate values can exist, uniquely identifies each tuple or row in a table, constraint prevents duplicate values in table
 * Constraint NOT NULL - ensures fields cannot contain a null value
+
+## SELECT Statement
+* Retrieval of data
+* SELECT statement = query, output that we get from executing query - result set/result table
+* WHERE Clause - to restrict the Result Set
+* WHERE clause requires a predicate
+* Predicate - is conditioned evaluates to true, false or unknown, used in search condition
