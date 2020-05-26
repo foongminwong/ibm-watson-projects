@@ -126,3 +126,10 @@
     * Connection objects - connect to DB and manage transactions
     * Query objects - cursor objects used for run queries
 * Database cursor - control structure enables traversal over the records in a database like a file handler
+
+**Connecting to a database using ibm_db API**
+* ibm_db API library
+    * provides SQL APIs for Python applciations includes functions for connecting to a DB, preparing and issuing SQL statements, fetching rows from result sets
+    * includes functions for calling stored procedures, committing and rolling back transactions, handling errors and retrieving metadata
+    * provides a variety of useful Python functions for accessing and manipulating data in an IBM data server database
+    * can be used to connect to certain IBM databases like Db2 and Db2 Warehouse on Cloud
