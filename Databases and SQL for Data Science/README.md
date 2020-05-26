@@ -85,3 +85,13 @@
 **Additional Information**
 * Create Schema = A SQL schema is identified by a schema name, and includes a authorization identifier to indicate the user or account who owns the schema. Schema elements include tables, constraints, views, domains and other constructs that describe the schema. (e.g. LIBRARY schema has multiple tables such as AUTHOR, BOOK)
 * Database -> Schema -> Tables
+
+## Advanced SQL
+
+**Relational Model Constraints**
+* Primary key (PK) - uniquely identifies each row in table
+* Foreign key (FK) - set of columns referring to a PK of another table
+* Parent table = a table containing PK that is realted to at least 1 FK
+* Dependent table = a table containing 1 or more FK
+
+
