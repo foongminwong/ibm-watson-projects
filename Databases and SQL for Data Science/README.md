@@ -94,4 +94,13 @@
 * Parent table = a table containing PK that is realted to at least 1 FK
 * Dependent table = a table containing 1 or more FK
 
+**Relational Model Constraints - Advanced**
+* 6 constraints:
+    * Entity Integrity Constraint - no attribute participating in the PK of a relation is allowed to accept null values (PK cannot have an unknown value!) (Reason: A PK uniquely identifies each row in a table. If PK could have NULL values, you could end up with duplicate rows in a table)
+    * Referential Integrity Constraint - ensures the validity of the data using a combination of PK and FK
+    * Semantic Integrity Constraint - refers to correctness of the meaning of the data
+    * Domain Constraint - specifies the permissible values for a given attribute
+    * Null Constraint - specifies that attribute values cannot be null
+    * Check Constraint - enforces domain integrity by limiting the values that are accepted by an attribute
+
 
