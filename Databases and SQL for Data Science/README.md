@@ -120,3 +120,9 @@
     * interactive output (rich interactive output HTML, images, videos, LaTex)
     * big data integration (leverage Apache Spark from Python, R, Scala, other big data tools - scikit-learn, ggplot2, TensorFlow, pandas)
 * API - set of functions that you can call to get access to some type of servers
+
+**Writing code using DB-API**
+* 2 concepts in the Python DB-API:
+    * Connection objects - connect to DB and manage transactions
+    * Query objects - cursor objects used for run queries
+* Database cursor - control structure enables traversal over the records in a database like a file handler
