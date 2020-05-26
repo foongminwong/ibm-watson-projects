@@ -133,3 +133,7 @@
     * includes functions for calling stored procedures, committing and rolling back transactions, handling errors and retrieving metadata
     * provides a variety of useful Python functions for accessing and manipulating data in an IBM data server database
     * can be used to connect to certain IBM databases like Db2 and Db2 Warehouse on Cloud
+
+**Creating tables, loading data and querying data**
+* `ibm_db.exec_immediate(conn, statement, optional)` - prepares and executes a SQL statement
+* Pandas - retrieve data from tables, high level data structures, manipulate + data analysis
