@@ -104,3 +104,19 @@
     * Check Constraint - enforces domain integrity by limiting the values that are accepted by an attribute
 
 
+
+## Accessing databases using Python
+**How to Access Databases Using Python**
+* DB stands for database
+* create an instance in the cloud, connect to a DB, query data from the DB using SQL, analyze data using Python, describe SQL API, proprietary API used by popular SQL-based DBM systems
+* Python - popular scripting language for connecting to DBs (packages: NumPy, pandas, matplotlib, SciPy), easy to use, simple syntax, open source nature - ported to many platforms, support RDBS, write Python code to access DBs via Python DB API
+- Python  - Open Source, not proprietary
+- Notebook - runs an environment that allows creating & sharing docs that contain live code, equations, visualizations, explanatory texts
+- Notebook interface - virtual notebook environemnt used for programming (e.g: mathematical workbook, maple worksheet, matlab notebook, IPython Jupyter, R markdown, Apache Zeppelin, Apache Spark notebook, Databricks cloud)
+- Jupyter notebook - open source web application let users share documents tht contain live code, equations, visualizations, narrative texts
+- Pros of Jupyter Notebook:
+    * support >40 prorgamming lang - Python, R, Julia, Scala
+    * Share notebooks by email, dropbox, GitHub
+    * interactive output (rich interactive output HTML, images, videos, LaTex)
+    * big data integration (leverage Apache Spark from Python, R, Scala, other big data tools - scikit-learn, ggplot2, TensorFlow, pandas)
+* API - set of functions that you can call to get access to some type of servers
