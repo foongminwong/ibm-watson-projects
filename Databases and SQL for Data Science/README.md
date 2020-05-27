@@ -153,3 +153,9 @@
 * trailing underscroe- end of query
 * user backslash `\` as escape character in cases where query contains single quotes
 * use `\` to split queries to multiple lines in Jupyter or use `%%sql` -> implies the rest of the content in the cell is to be interpreted by SQL magic
+
+**Getting Table and Column Details**
+* Query system catalog to get a lsit of tables & their properties
+    * DB2 - syscat tables : `select * from syscat.tables`
+    * SQL Server - information schema tables
+    * Oracle - user tables
