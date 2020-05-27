@@ -137,3 +137,12 @@
 **Creating tables, loading data and querying data**
 * `ibm_db.exec_immediate(conn, statement, optional)` - prepares and executes a SQL statement
 * Pandas - retrieve data from tables, high level data structures, manipulate + data analysis
+
+**Join Overview**
+* JOIn operator - combine rows from 2 or more tables, based on relationship
+* Inner Join - returns the rows that match only
+* Outer Join
+    * Left Outer Join = left join - displays all rows from the `left` table and combines matching rows from the `right` table
+    * Right Outer Join = right join - all rows from the `right` table & any matching rows from the `left` table
+    * Full Outer Join = full join - returns all rows from `both`tables rather than the rows that match
+* Use alias instead of rewriting the whole table name
