@@ -159,3 +159,7 @@
     * DB2 - syscat tables : `select * from syscat.tables`
     * SQL Server - information schema tables
     * Oracle - user tables
+
+**LOADing Data**
+* Problems of loading DATEs, TIMEs, and TIMESTAMPs since their formats can vary significantly
+* Check if there is a pre-defined format
