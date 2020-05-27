@@ -146,3 +146,10 @@
     * Right Outer Join = right join - all rows from the `right` table & any matching rows from the `left` table
     * Full Outer Join = full join - returns all rows from `both`tables rather than the rows that match
 * Use alias instead of rewriting the whole table name
+
+**Working with CSV file**
+* spaces are mapped to underscores
+* double underscrores
+* trailing underscroe- end of query
+* user backslash `\` as escape character in cases where query contains single quotes
+* use `\` to split queries to multiple lines in Jupyter or use `%%sql` -> implies the rest of the content in the cell is to be interpreted by SQL magic
