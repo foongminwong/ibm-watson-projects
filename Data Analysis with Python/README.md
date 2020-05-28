@@ -42,3 +42,28 @@
 
 **Accessing Databases with Python**
 * DB-API = standard API for accessing relational databases
+
+
+## Data Wrangling
+
+**Pre-processing Data in Python**
+* Data pre-processing/ data cleaning/data wrangling = process of converting/mapping data from the 'raw' form into another fofrmat in order to prepare the data for further analysis 
+1. Identify and handle missing values
+    * Check with the data collection source
+    * Drop the missing values
+        * drop the variable
+        * drop the single entry of the missing value = don't have a lot of observations with missing data
+        * `dataframes.dropna(subset=['column_name'],axis=0,inplace=True)` -`axis=0` that drops the entire row or `axis=1` that drops the entire column
+        * checkout http://pandas.pydata.org/
+    * Replace missing values - (better) no data is wasted, but less accurate since we replace the missing data with a gues of what the data should be 
+        * `dataframes.replace(missing_val,new_val)`
+        * Numeric variable - replace it with an average value of entire variable = 
+            * `mean = df['normalize-losses'.mean`
+            * `df['normalized-losses'].replace(np.nan, mean)` 
+        * Categorical variable (e.g. fuel type) - replace by frequency with the mode of thte particular column/ appears msot often
+        * replace it based on other functions
+        * leave it as missing data 
+2. Data Formatting
+3. Data Normalization (centering/scaling)
+4. Data Binning
+5. Turning Categorical values to numeric values - make statistical modeling easier
