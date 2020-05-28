@@ -62,14 +62,26 @@
             * `df['normalized-losses'].replace(np.nan, mean)` 
         * Categorical variable (e.g. fuel type) - replace by frequency with the mode of thte particular column/ appears msot often
         * replace it based on other functions
-        * leave it as missing data 
+        * leave it as missing data
+
 2. Data Formatting
     * `df["city-mpg"] = 235/df["city-mpg"]`
     * `dr.rename(columns={"city-mpg":"city-L/100km"}, inplace=True)`
     * Incorrect data types
     * Identify data types = `dataframe.dtype()`
     * Convert data types = `dataframe.astype()` (e.g.: `df["price"] = df["price"].astype("float")`) - cast the column price to *float*
-    
-3. Data Normalization (centering/scaling)
+
+3. Data Normalization (centering/scaling) - uniform the features value with different range
+    * Not normalized -> normalized (similar value range & similar intrinsic influence on analytical model)
+    * Methods of normalizing data:
+        * Simple Feature Scaling: Divides each val by max val, new wal range between 0 and 1
+            * xnew = xold/xmax
+            * `df["length"] = df["length"]/df["length"].max()`
+        *  Min-max: new val ranges between 0 and 1 
+            * xnew = (xold-xmin)/(xmax - xmin)
+            * `df["length"] = (df["length"]-df["length"].min())/(df["length"].max()-df["length"].min())`
+        * z-score/standard score: new val range from -3 to +3
+            * xnew = (xold - mu)/sigma
+            * `df["length"] = (df["length"]-df["length"].mean())/df["length"].std()`
 4. Data Binning
 5. Turning Categorical values to numeric values - make statistical modeling easier
