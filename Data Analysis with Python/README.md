@@ -99,3 +99,26 @@
     * e.g. fuel: gas/diesel
     * `pandas.get_dummies()` - convert categorical variables to dummy variables ( 0 or 1)
     * `pd.get_dummies(df['fuel'])`
+
+## Exploratory Data Analysis (EDA)
+
+# Exploratory Data Analysis
+* Summarize main characteristics of data
+* Gain better understanding of the data set
+* Uncover relationships between variables
+* Extract important variables
+* Going to learn:
+    * Descriptive statistics = short summaries about the sample & measures of the data
+        * `df.describe()`
+        * `drive_wheels_counts = df["drive-wheels"].value_counts()` - summarize categorical data using `value_counts()` method
+        * `drive_wheels_counts.rename(columns={'drive-wheels':'value_counts'}, inplace=True)`
+        * `drive_wheels_counts.index.name='drive-wheels'`
+        * Boxplots - easily sport outliers, see distribution & skewness of the data
+        * Scatterplot
+            * each obs represented as point
+            * show relationship between 2 variables
+    * GroupBy
+    * ANOVA
+    * Correlation
+    * Correlation - Statistics, Pearosn correlaation, correlation heatmaps
+
