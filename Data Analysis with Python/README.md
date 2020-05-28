@@ -94,3 +94,8 @@
     * 
 
 5. Turning Categorical values to numeric values - make statistical modeling easier
+    * Problem: Most statistical models cannot take in objects/strings as input, for model training only take numbers as inputs
+    * **Solution: Add dummy variables for each unique category & Assign 0 or 1 in each category** - one-hot encoding
+    * e.g. fuel: gas/diesel
+    * `pandas.get_dummies()` - convert categorical variables to dummy variables ( 0 or 1)
+    * `pd.get_dummies(df['fuel'])`
