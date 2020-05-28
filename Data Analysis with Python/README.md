@@ -32,3 +32,10 @@
 * Export Pandas df to csv
     * `df.to_csv(path)`
 
+**Getting Started Analyzing Data in Python**
+* why check data types using `df.dtypes`?
+    * potential info & type mismatch
+    * compatibility with python medthods
+* `df.describe()` = returns a statistical summary (count, mean, std, min, max, quartiles), `df.describe(include="all")` = full summary statistics (+ unqiue, top, freq)
+* `NaN` - not a number
+* `df.info()`
