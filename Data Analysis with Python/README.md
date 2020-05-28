@@ -64,6 +64,12 @@
         * replace it based on other functions
         * leave it as missing data 
 2. Data Formatting
+    * `df["city-mpg"] = 235/df["city-mpg"]`
+    * `dr.rename(columns={"city-mpg":"city-L/100km"}, inplace=True)`
+    * Incorrect data types
+    * Identify data types = `dataframe.dtype()`
+    * Convert data types = `dataframe.astype()` (e.g.: `df["price"] = df["price"].astype("float")`) - cast the column price to *float*
+    
 3. Data Normalization (centering/scaling)
 4. Data Binning
 5. Turning Categorical values to numeric values - make statistical modeling easier
