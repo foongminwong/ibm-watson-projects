@@ -16,5 +16,19 @@
         * Scikit-learn: tools for statistical modeling - regression, classification, clustering (built on NumPy, SciPy, Matplotlib)
         * Statsmodels: explore data, estimate statistical models, perform statistical tests
 
-
+**Importing and Exporting Data in Python**
+* Import data
+    * Format: .csv (might have header in the first row, if not, each row is 1 data point), .json, .xlsx, .hdf
+    * Filepath
+* Import csv in Python
+    * use Pandas `read_csv(?,header=None)` into panda dataframe
+* Print dataframe
+    * `df` = entire dataframe (can be large datasets!)
+    * `df.head(n)` = show the 1st n rows of df
+    * `df.tail(n)` = show bottom n rows of df
+* Add headers
+    * `headers = ["name", "date", ....]`
+    * `df.colums = headers`
+* Export Pandas df to csv
+    * `df.to_csv(path)`
 
