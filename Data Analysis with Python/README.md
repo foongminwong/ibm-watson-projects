@@ -39,3 +39,6 @@
 * `df.describe()` = returns a statistical summary (count, mean, std, min, max, quartiles), `df.describe(include="all")` = full summary statistics (+ unqiue, top, freq)
 * `NaN` - not a number
 * `df.info()`
+
+**Accessing Databases with Python**
+* DB-API = standard API for accessing relational databases
