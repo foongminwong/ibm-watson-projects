@@ -82,6 +82,15 @@
             * `df["length"] = (df["length"]-df["length"].min())/(df["length"].max()-df["length"].min())`
         * z-score/standard score: new val range from -3 to +3
             * xnew = (xold - mu)/sigma
-            * `df["length"] = (df["length"]-df["length"].mean())/df["length"].std()`
+            * `df["length"] = (df["length"]-df["length"].mean())/df["length"].std()` price -> low price, medium price, high price instead of 5000, 10000,12000, 30000...
+            * `bins = np.linspace(min(df["price"]), max(df["price"]), 4)` - return arrays of bins with 4 equally spaced numbers over the specified interval of the price
+            * `group_names=["Low","Medium","High"]`
+            * `df["price=binned"] = pd.cut(df["price"],bins, labels=group_name,include_lowest=True)` - use `pandas` function `cut` to segment & sort the data values into bins
+            * then use histogram to visualize data dist after binning
 4. Data Binning
+    * group values into `bins` - group age into [0 to 5], [6 to 10], [11 to 15]
+    * binning can sometimes improve the accuracy of predictive models
+    * group a set of numerical values into a set of `bins` to ahve better understanding of the data distribution - converts numeric to categorical variables
+    * 
+
 5. Turning Categorical values to numeric values - make statistical modeling easier
