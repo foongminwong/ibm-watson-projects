@@ -148,3 +148,12 @@
 * p-value (p<0.001 - strong certainty in the result, p<0.05 - moderate, p<0.1 - weak, p > 0.1 - no certainty)
 * `pearson_coef, p_value = stats.pearsonr(df['horsepower'], df['price'])`
 * correlation heatmap
+
+**Analysis of Variance ANOVA**
+* Statistical comparison of groups
+* Why: Finding correlation between different groups of a categorical variable
+* What we get from ANOVA:
+    * F-test score: variation between sample group means divided by variation within same group
+    * p-value: confidence degree (whether the obtained result is statistically significant)
+* Small F = poor correlation between variable categories and target variable
+* Large F = strong correlation between variable categories and target variable (the diff between the prices of Hondas  & Jaguar is VERY significant)
