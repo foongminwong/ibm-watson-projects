@@ -102,7 +102,7 @@
 
 ## Exploratory Data Analysis (EDA)
 
-# Exploratory Data Analysis
+**Exploratory Data Analysis**
 * Summarize main characteristics of data
 * Gain better understanding of the data set
 * Uncover relationships between variables
@@ -122,3 +122,29 @@
     * Correlation
     * Correlation - Statistics, Pearosn correlaation, correlation heatmaps
 
+**GroupBy in Python**
+* `dataframe.groupby()`
+    * can be applied on categorical variables
+    * group data into categories
+    * single/multiple variables
+* `df_test = df[['drive-wheels','body-style','price']]`
+* `df_grp = df_test.groupby(['drive-wheels', 'body-style'], as_index=False).mean()`
+* `df_grp`
+* find the average "price" of each car based on "body-style" - `df[['price','body-style']].groupby(['body-style'], as_index=False).mean()`
+* `pivot()` - example: `df_pivot=df_grp.pivot(index='drive-wheels', columns='body-style')`
+* pivot - one variable displayed along the columns and the other variable displayed along the rows
+* heatmap - plot target variable over multiple variables
+* `plt.pcolor(df_pivot, cmap='RdBu')`
+* `plt.colorbar(); plt.show()`
+
+**Correlation**
+* coorelation = measure to what extent different variables are interdependent
+* `sns.regplot(x="engine_size",y="price", data=df)`
+* `plt.ylim(0,)`
+
+**Correlation - Statistics**
+* Pearson Correlation - measure strength of correlation between 2 features
+* correlation coefficient (close to +1 - large +ve relationship,-1,0 - no relationship)
+* p-value (p<0.001 - strong certainty in the result, p<0.05 - moderate, p<0.1 - weak, p > 0.1 - no certainty)
+* `pearson_coef, p_value = stats.pearsonr(df['horsepower'], df['price'])`
+* correlation heatmap
