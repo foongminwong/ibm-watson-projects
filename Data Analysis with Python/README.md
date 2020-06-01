@@ -157,3 +157,16 @@
     * p-value: confidence degree (whether the obtained result is statistically significant)
 * Small F = poor correlation between variable categories and target variable
 * Large F = strong correlation between variable categories and target variable (the diff between the prices of Hondas  & Jaguar is VERY significant)
+
+## Mdoel Development
+
+**Model Development**
+* Model = a mathematical equation used to predict a value given 1/more other values (relating 1/more independent vriables to dependent variables)
+    * E.g.: Input (Independent Variables/features) `highway-mpg`-> model -> Output (Dependent Variables) `predicted price` 
+* The more relevant data you ahve, the more accurate your model is
+* In order to getting more data you can try different types of models
+    * Simple Linear Regression
+    * Multiple Linear regression
+    * Polynomial Regression
+
+
