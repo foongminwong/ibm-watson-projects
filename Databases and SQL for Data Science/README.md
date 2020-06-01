@@ -163,3 +163,4 @@
 **LOADing Data**
 * Problems of loading DATEs, TIMEs, and TIMESTAMPs since their formats can vary significantly
 * Check if there is a pre-defined format
+
