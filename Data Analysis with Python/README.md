@@ -165,8 +165,28 @@
     * E.g.: Input (Independent Variables/features) `highway-mpg`-> model -> Output (Dependent Variables) `predicted price` 
 * The more relevant data you ahve, the more accurate your model is
 * In order to getting more data you can try different types of models
-    * Simple Linear Regression
-    * Multiple Linear regression
+    * Simple Linear Regression (SLR)
+        * 1 independent var to make a prediction
+        * use training points to fit or train our model & get parameters
+        * store datapoints in dataframes/numpy arrays
+        * use the model to predict the price of the car, BUT *model is NOT ALWAYS CORRECT* (predicted value does not match the actual value, if it's corerct, then it's due to the noise)
+
+        * Import linear_model from scikit-learn`from sklearn.linear_model import LinearRegression`
+        * Create a Linear Regression Object using the constructor `lm = LinearRegression()`
+        * Predictor variable `X=df[['highway-mpg']]`
+        * Target variable `Y=df['price']`
+        * Fit the model `lm.fit(X,Y)`
+        * Obtain prediction `Yhat=lm.predict(X)` - output as an array
+        * Intercept (b0) `lm.intercept_`
+        * Slope coefficient `lm.coef_`
+
+    * Multiple Linear Regression (MLR)
+        * Multiple independent vars to make a prediction (1 continuous target (Y) var & 2 or more predictor (X) vars)
+        * Extarct 4 predictor vars `Z = df[['horsepower','curb-weight','engine-size','highway-mpg']]`
+        * Train model `lm.fit[Z,df['price']]`
+        * Obtain prediction `Yhat=lm.predict(X)` - output = array with same # of elements as # of samples
     * Polynomial Regression
+
+*
 
 
