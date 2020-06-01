@@ -187,6 +187,24 @@
         * Obtain prediction `Yhat=lm.predict(X)` - output = array with same # of elements as # of samples
     * Polynomial Regression
 
-*
-
-
+**Model Evaluation using Visualization**
+* actual y, predicted yhat
+* Regression Plot
+* Pros: A good estimate of relaetionship between 2 vars, the strength of correlation, direction of the relationship (+ve/-ve)
+* Combination of scatterplot (each point with different y) & fitted linear regression (yhat)
+    * `import seaborn as sns`
+    * `sns.regplot(x="highway-mpg",y="price",data=df)`
+    * `plt.ylim(0,)`
+* Residual Plot
+    * Represents error between actual val, examine the difference between predicted val & actual val (pred - actual)
+    * Expected results: Zero mean, distributed evenly around the x axis with similar variance, no curvature
+    * Spread of resids: Randomly spread out around x-axis then a linear model is appropriate
+    * If we see a "U" shape resid plot with not randomly spread out around the x-axis, then nonlinear model may be more appropriate
+    * If we see a "<" shape resid plot (the variance of the reids increase with x), then the model is incorrect
+        * `import seaborn as sns`
+        * `sns.residplot(df['highway-mpg'],df['price'])`
+* Distribution Plot
+    * Counts the predicted val (fitted values result from model) versus actual val
+        * `import seaborn as sns`
+        * `ax1 = sns.distplot(df['price'], hist=False, color="r",label="Actual Value")`
+        * `sns.displot(Yhat, hist=False, color="b",label="Fitted Values", ax=ax1)`
