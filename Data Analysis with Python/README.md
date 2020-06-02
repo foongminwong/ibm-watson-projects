@@ -185,7 +185,36 @@
         * Extarct 4 predictor vars `Z = df[['horsepower','curb-weight','engine-size','highway-mpg']]`
         * Train model `lm.fit[Z,df['price']]`
         * Obtain prediction `Yhat=lm.predict(X)` - output = array with same # of elements as # of samples
-    * Polynomial Regression
+    * Polynomial Regression and Pieplines
+        * when linear model is not the ebst fit of our data
+        * Polynomial Regression
+            * special case of general linear regression model
+            * describe curvilinear relationships - by squaring/ setting higher order terms of the predictor vars
+            * Quadratic 2nd order, Cubic 3rd order, Higher order
+            * Create 3rd order polynomial regression model `f=np.polyfit(x,y,3)`
+            * `p=np.polyld(f)` -> `print(f)`
+        * Polynomial Regression with >1 Dimension
+            * `from sklearn.preprocessing import PolynomialFeatures`
+            * Create a 2nd order polynomial transform object pr `pr=PolynomialFeatures(degree=2, include_bias=False)`
+            * Transform the data `pr.fit_transform([1,2], include_bias=False)`
+            * As dimension of data gets larger, may want to normalize multiple features in scikit-learn. We can use the preprocessing module to simplify many tasks
+                * Normalize/Standardize each feature simultaneously
+                * Import StandardScaler `from sklearn.preprocessing import StandardScaler`
+                * Train the object `SCALE=StandardScaler()`
+                * Fit the scale object `SCALE.fit(x_data[['horsepower', 'highway-mpg']])`
+                * Transform the data into a new data frame n array x_scale `x_scale=SCALE.transform(x_data[[]'horsepower','highway-mpg'])`
+        * Pipelines - simplify code by using pipeline library
+            * Many steps to getting prediction: Normalization -> polynomial transform -> linear regression
+            * Pipeline sequentially perform a series of transformations, last steo carries out prediction (LR)
+            * Import all modules that we need `from sklearn.preprocessing import PolynomialFeatures` 
+            * `from sklearn.lineaar_model import LinearRegression`
+            * `from sklearn.preprocessing import StandardScaler`
+            * Import library pipeline `from sklearn.pipeline import Pipeline`
+            * Create list of tuples, the 1st element in the tuple contains the name of estimator model, 2nd element contains model constructor `Input = [('scale', StandardScaler()),('polynomial', PolynomialFeatures(degree=2)),...('mode',LinearRegression())]`
+            * Input the list in the pipeline COnstructor `pipe=Pipeline(Input)` pipe is anPipeline object
+            * Train pipeline by applying the train method to the pipeline obj `pipe object` `Pipe.fit(df[['horsepower', 'curb-weight','highway-mpg']], y)`
+            * Produce prediction `yhat=Pipe.predict(X[['horsepower', 'curb-weight', 'engine-size', 'highway-mpg']])`
+            * Normalizes data -> Perform Polynomial Transform -> Output prediction
 
 **Model Evaluation using Visualization**
 * actual y, predicted yhat
@@ -208,3 +237,4 @@
         * `import seaborn as sns`
         * `ax1 = sns.distplot(df['price'], hist=False, color="r",label="Actual Value")`
         * `sns.displot(Yhat, hist=False, color="b",label="Fitted Values", ax=ax1)`
+
