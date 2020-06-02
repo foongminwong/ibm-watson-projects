@@ -273,3 +273,54 @@ M**easures for In-Sample Evaluation**
             * MSE for an MLR model will be smaller than the MSE for an SLR model, since the erros of the data will decrease when more variables are included in the model
             * Poly reg will also have a smaller MSE then regular regression
             * A similar inverse relationship holds for R^2
+
+## Model Evaluation and Refinement
+* Tell us how model performs in the real world
+* In-sample evaluation
+    * how well our model will fits the data used to train it
+    * Problem: Does not tell us how well the trained model can be used to predict new data 
+    * Solution: 
+        * Use In-sample data or training data to train the model
+        * Use Out-of-sample data/test data/set, to approximate how the model performs in the real world
+* Separate data into Training/Testing Sets
+    * Use test data to get an idea of how our model will perform in the real world
+    * Larger - training (70% of the data) , smaller - testing (30% for testing)
+    * Training Set - build a model & discover predictive relationships
+    * Testing set - evaluate model performance
+    * After completed testing our model, should use ALL the data to train the model to get the BEST performance
+    * Split datasets into random train & test subsets `from sklearn.model_selection import train_test_split`
+    * `x_train, x_test, y_train, y_test = train_test_split(x_data, y_data,test_size=0.3, random_state-0)`
+    * x_data - independent vriables (highway-mpg,...), y_data - target (df['price']), x/y_train - parts of available data as training set, test_size - percentage of the data for testing (here 30%), random_state - # generator/random seed for random data set splitting
+* Generalization Performance
+    * Measure of how well our data does at predicting previously unseen data
+    * Error we obtain using our testing data = approximation of this error
+    * before that, we saw the distribution plot is pretty good and predicted dist fits well on actual dist, however, after seeing the dist plot using test data, the distribution becomes RELATIVELY DIFFERENT
+
+    * Lots of Training Data
+        * Accurate means of how well the model performs in the real world
+        * BUT Precision performance low
+    * Less Training Data, More to test model
+        * accuracy of generalization performance will be less
+        * BUT model has good precision
+        * furtehr away from the true generalization performance (the bullspoint)
+* Cross validation
+    * To avoid above generalization error
+    * Common out-of-sample evaluation (test) metrics
+    * effective use of data (each observation is used for both training & testing)
+
+        1. Dataset split into K equal groups (each group called as a fold, some of the folds can be used as a training set which we use to train the model & remaining parts are used as test set)
+        2. Example: 3 folds for training, 1 for testing (Repeated until each partition is used for both training & testing)
+        3. Use average results as the estimate of out-of-sample error
+        4. Evaluation metrics depend on models such as R^2
+    * Import libraries `from sklearn.model_seletion import cross_val_score`
+    * `scores=cross_val_score(lr, x_data,y_data,cv=3)`
+        * lr - type of model we use to do cross validation (e.g: LinearRegression model/obj)
+        * x/y_data = data 
+        * cv = # of partition
+        * returns an array of scores, one for each partition that was chosen as the testing set
+        * each calculated score is R^2
+    * Average the result together to estimate out of sample R^2 `np.mean(scores)`
+    * `cross_val_score` returns a score value to tell us the cross validation result. IF we want to know the actual predicted values from our model BEFORE the R^2 are calculated? 
+        * Use `cross_val_predict()` - returns prediction that obtained for each element when it was in test set
+            * `from sklearn.model_selection import cross_val_predict`
+            * `yhat=cross_val_predict(lr2e,x_data,y_data,cv=3)`
