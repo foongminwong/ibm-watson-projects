@@ -250,3 +250,26 @@ M**easures for In-Sample Evaluation**
         * `R^2 = (1 - MSE of regression line/MSE of average data or ybar)`
         * `lm.score(X,Y)` if R^2 = 0.49, the approxiamtely 49.695% of the variation of price is explained by the simple linear model
         * R^2 between 0 and 1. If R^2 negative, then might be overfitting
+
+**Prediction and Decision Making**
+* Determine a Good Model Fit:
+    * Make sure model results/predicted values make sense
+        * Train the model `lm.fit(df['highway-mpg'], df['prices'])`
+        * Predict price of car with 30 highway-mpg `lm.predict(np.array(30.0).reshape(-1,1))`
+        * `lm.coef_`
+        * Import numpy `import numpy as np`
+        * Use numpy func arrange to generate s seq from 1 to 100 `new_input=np.arrange(1,101,1).reshape(-1,1)` - 1, 2,3...99,100 -> incremenet seq 1 step at a time
+        * yhat=lm.predict(new_input)
+    * Viusalization (regression Plot, resid plot, if have curvature, then suggesting nonlinear behavior, dist plot - good for multi liner reg)
+        * dist plot - suggests a non-linear model may be more suitable
+        * or we might need more data in this range
+    * Nuemrical measures for evaluation (determine if a model is good or not)
+        * MSE (As MSE increases, targets get further from the predicted points)
+        * R^2
+    * Comparing between different models
+        * Comparing MLR and SLR
+        * Is lower MSE always implying better fit?
+            * Not necessarily
+            * MSE for an MLR model will be smaller than the MSE for an SLR model, since the erros of the data will decrease when more variables are included in the model
+            * Poly reg will also have a smaller MSE then regular regression
+            * A similar inverse relationship holds for R^2
