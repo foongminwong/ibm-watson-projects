@@ -275,6 +275,8 @@ M**easures for In-Sample Evaluation**
             * A similar inverse relationship holds for R^2
 
 ## Model Evaluation and Refinement
+
+**Model Evaluation and Refinement**
 * Tell us how model performs in the real world
 * In-sample evaluation
     * how well our model will fits the data used to train it
@@ -324,3 +326,37 @@ M**easures for In-Sample Evaluation**
         * Use `cross_val_predict()` - returns prediction that obtained for each element when it was in test set
             * `from sklearn.model_selection import cross_val_predict`
             * `yhat=cross_val_predict(lr2e,x_data,y_data,cv=3)`
+
+**Overfitting, Underfitting and Model Selection**
+
+* Model Selection
+    * Underfitting - the model is too simple to fit the data
+        * If we increase the order of the polynomial, the model fits better, BUT still not flexible enough and exhibits underfitting
+    * Overfitting - the model is too flexible & fits the noise rather than the function, the estimated function oscillates not tracking the function
+    * MSE of training & testing set of different order polynomials
+        * training error ↓ with the order of polynomial
+        * test error ↓ till best order of polynomial then error begins ↑
+    * `Training points = y(x) + noise` noise is random, can't predict = irreducible error
+    * plot of R^2 -> closer R^2 to 1, more accourate the model is
+* Create an empty list to store vals `Rsqu_test=[]`
+* Create list containing diff polynomial orders `order=[1,2,3,4]`
+* Iterate the list using a loop
+
+<code>
+for n in order:
+
+    # create a polynomial feature object with the order of the polynomial as a parameter
+    pr=PolynomialFeatures(degree=n)
+
+    # transform training & test data into polynomial using the fit transform method
+    x_train_pr=pr.fit_transform(x_train[['horsepower']]) 
+
+    x_test_pr=pr.fit_transform(x_test[['horsepower']]) 
+
+    # fit regression model suing transform data
+    lr.fit(x_train_pr, y_train)
+
+    # calculate R^2 using test data and store in array
+    Rsqu_test.append(lr.score(x_test_pr,y_test))
+
+</code>
