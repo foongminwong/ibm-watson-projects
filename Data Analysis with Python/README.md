@@ -360,3 +360,19 @@ for n in order:
     Rsqu_test.append(lr.score(x_test_pr,y_test))
 
 </code>
+
+**Ridge Regression**
+
+* Control the magnitude of those polynomial coefficients (estimated polynomial coefficients have a very LARGE magnitude) by introducing parameter alpha
+* Alpha - we select b4 fitting/training a model carefully
+* As alpha ↑, parameters get smaller
+* If aplpha TOO LARGE, coef will appraoch 0 & underfit data, prevents overfitting, R^2 on test data ↓
+* If alpha is 0, overfitting is evident
+* To select alpha, we use **cross validation**
+    * `from sklearn.linear_model import Ridge`
+    * `RidgeModel=Ridge(alpha=0.1)`
+    * `RidgeModel.fit(X,y)`
+    * `Yhat=RidgeModel.predict(X)`
+    * select alpha that maximizes R^2
+
+↑↓
