@@ -237,4 +237,16 @@
         * `import seaborn as sns`
         * `ax1 = sns.distplot(df['price'], hist=False, color="r",label="Actual Value")`
         * `sns.displot(Yhat, hist=False, color="b",label="Fitted Values", ax=ax1)`
-
+M**easures for In-Sample Evaluation**
+* Determine how good the model fits on data
+* 2 important emsures to determine the fit of model
+    * Mean Squared Error (MSE) - (actual - predicted) ^2
+        * The mean/average of all the errors by adding them together & dividing by # of samples
+        * Find MSE in Python `from sklearn.metrics import mean_squared_error`
+        * 2 input: actual val & predicted val of target variable `mean_squared_error(df['price'], Y_predict_simple_fit)` or `mean_squared_error(Y,Yhat)`
+    * R-squared (R^2) = Coefficient of Determination
+        * measure to determine how close the data is to fitted regression line
+        * Percentage of variation of the target variable (Y) that is explained by the linear model
+        * `R^2 = (1 - MSE of regression line/MSE of average data or ybar)`
+        * `lm.score(X,Y)` if R^2 = 0.49, the approxiamtely 49.695% of the variation of price is explained by the simple linear model
+        * R^2 between 0 and 1. If R^2 negative, then might be overfitting
