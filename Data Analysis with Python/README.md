@@ -375,4 +375,9 @@ for n in order:
     * `Yhat=RidgeModel.predict(X)`
     * select alpha that maximizes R^2
 
-↑↓
+**Grid Search**
+* Scan trhough multiple free params with few lines of code/ takes the model/objs you would like to train & diff vals of the hyperparameters
+* params like alpha - not part of the fitting/training process
+* Hyperparameter - e.g.: alpha in Ridge regression is called hyperparameter
+* **Grid Search** - scikit-learn has a means of automatically iterating over these hyperparameters using cross-validation
+
